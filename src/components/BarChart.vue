@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="barChart" id="barChart"></canvas>
+  <canvas ref="myChart" id="barChart"></canvas>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
       { year: 2016, count: 28 },
     ];
 
-    const ctx = this.$refs.barChart;
+    const ctx = this.$refs.myChart;
 
     new Chart(ctx, {
       type: 'bar',

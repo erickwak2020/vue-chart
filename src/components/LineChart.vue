@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="lineChart" id="lineChart"></canvas>
+  <canvas ref="myChart" id="lineChart"></canvas>
 </template>
 
 <script>
@@ -20,7 +20,7 @@ export default {
       }]
     };
 
-    const ctx = this.$refs.lineChart;
+    const ctx = this.$refs.myChart;
     new Chart(ctx, {
       type: 'line',
       data: data
