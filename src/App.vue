@@ -1,39 +1,20 @@
 <template>
   <div>
     <h1>Chart.js</h1>
-    <canvas id="myChart"></canvas>
+    <bar-chart></bar-chart>
+    <line-chart></line-chart>
   </div>
 </template>
 
 <script>
-import {Chart, registerables} from "chart.js";
-
+import BarChart from "@/components/BarChart";
+import LineChart from "@/components/LineChart";
 export default {
   name: 'App',
   components: {
+    LineChart,
+    BarChart
   },
-  mounted() {
-    const ctx = document.getElementById('myChart');
-    Chart.register(...registerables);
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  }
 }
 </script>
 
