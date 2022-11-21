@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import {Chart} from "chart.js/auto";
 import {months} from '@/utils/ChartSampleUtils';
 export default {
   name: "LineChart",
@@ -21,7 +20,7 @@ export default {
     };
 
     const ctx = this.$refs.myChart;
-    new Chart(ctx, {
+    new this.$Chart(ctx, {
       type: 'line',
       data: data
     });

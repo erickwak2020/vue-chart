@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import {Chart} from "chart.js/auto";
 export default {
   name: "BarChart",
   mounted() {
@@ -19,8 +18,8 @@ export default {
     ];
 
     const ctx = this.$refs.myChart;
-
-    new Chart(ctx, {
+    console.log(this);
+    new this.$Chart(ctx, {
       type: 'bar',
       data: {
         labels: data.map(row => row.year),
